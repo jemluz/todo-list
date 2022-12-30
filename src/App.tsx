@@ -1,7 +1,16 @@
-function App() {
+import { useState } from 'react';
+import { Header } from './components/Header'
+import { NewTask } from './components/NewTask'
+import styles from './styles/App.module.css'
+import './styles/index.css'
+
+export function App() {
   return (
-    <div className="App">Hello</div>
+    <div>
+      <Header />
+      <div className={styles.wrapper}>
+        <NewTask />
+      </div>
+    </div>
   )
 }
-
-export default App

@@ -1,0 +1,44 @@
+.new_task_form {
+  display: flex;
+  gap: 8px;
+}
+
+.new_task_form input {
+  width: 39.875rem;
+  height: 3.375rem;
+
+  color: var(--gray-100);
+  background: var(--gray-500);
+  border: 1px solid transparent;
+}
+
+.new_task_form input:hover {
+  border: 1px solid var(--purple-focus);
+}
+
+.new_task_form button {
+  width: 5.625rem;
+  height: 3.25rem;
+
+  background: var(--blue-500);
+  color: var(--gray-100);
+  font-weight: bold;
+  font-size: 0.875rem;
+
+  display: flex;
+  align-items: center;
+}
+
+.new_task_form button:hover {
+  box-shadow: 0 0 0 1px transparent;
+  background: var(--blue-300);
+}
+
+.new_task_form button:focus {
+  box-shadow: 0 0 0 1px var(--blue-300);
+}
+
+
+.new_task_form button svg {
+  margin-left: 8px;
+}
