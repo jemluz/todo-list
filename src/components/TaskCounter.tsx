@@ -2,7 +2,7 @@ import styles from '../styles/TaskCounter.module.css'
 
 export function TaskCounter() {
   return (
-    <header>
+    <header className={styles.counter_bar}>
       <strong className={styles.all_tasks}>
         Tarefas criadas <span className={styles.count}>5</span>
       </strong>

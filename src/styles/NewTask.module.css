@@ -1,11 +1,12 @@
 .new_task_form {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 5.625rem;
   gap: 8px;
   align-items: center;
 }
 
 .new_task_form input {
-  width: 39.875rem;
+  max-width: 39.875rem;
   height: 3.375rem;
 
   color: var(--gray-100);
@@ -18,7 +19,7 @@
 }
 
 .new_task_form button {
-  width: 5.625rem;
+  max-width: 5.625rem;
   height: 3.25rem;
 
   background: var(--blue-500);
@@ -30,9 +31,14 @@
   align-items: center;
 }
 
-.new_task_form button:hover {
+.new_task_form button[type=submit]:not(:disabled):hover {
   box-shadow: 0 0 0 1px transparent;
   background: var(--blue-300);
+}
+
+.new_task_form button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
 }
 
 .new_task_form button:focus {

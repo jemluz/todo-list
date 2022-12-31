@@ -1,14 +1,14 @@
-header {
+.counter_bar {
   display: flex;
   justify-content: space-between;
   margin: 4rem 0 1.5rem 0;
 }
 
-header strong {
+.counter_bar strong {
   font-size: .875rem;
 }
 
-header strong span {
+.counter_bar strong span {
   background: var(--gray-400);
   padding: 8px 12px;
   border-radius: 999px;

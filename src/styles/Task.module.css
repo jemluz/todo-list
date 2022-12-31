@@ -1,3 +1,7 @@
+.task+.task {
+  margin-top: 1rem;
+}
+
 .task {
   display: flex;
   justify-content: space-between;
@@ -10,10 +14,14 @@
 
 .task p {
   margin: 0 .75rem;
+  text-align: left;
+  width: 100%;
+  color: var(--gray-100);
 }
 
 .risked {
   text-decoration: line-through;
+  color: var(--gray-300) !important;
 }
 
 .delete_btn:hover {
