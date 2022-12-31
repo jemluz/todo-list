@@ -1,5 +1,5 @@
 # todo-list
- A starter challenge by @rocketseat
+ A starter challenge by @Rocketseat
 
 Disponível em: https://todo-list-opal-seven.vercel.app/
 
