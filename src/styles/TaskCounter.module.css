@@ -1,0 +1,30 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  margin: 4rem 0 1.5rem 0;
+}
+
+header strong {
+  font-size: .875rem;
+}
+
+header strong span {
+  background: var(--gray-400);
+  padding: 8px 12px;
+  border-radius: 999px;
+  margin-left: 8px;
+}
+
+.all_tasks {
+  color: var(--blue-300);
+}
+
+.done_tasks {
+  color: var(--purple-300);
+}
+
+.count {
+  font-size: .75rem;
+  font-weight: bold;
+  color: var(--gray-100);
+}

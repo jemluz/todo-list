@@ -1,0 +1,42 @@
+.task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 16px;
+  background: var(--gray-500);
+  border-radius: 8px;
+}
+
+.task p {
+  margin: 0 .75rem;
+}
+
+.risked {
+  text-decoration: line-through;
+}
+
+.delete_btn:hover {
+  color: var(--danger);
+  cursor: pointer;
+}
+
+.check_btn {
+  color: var(--blue-300);
+  transition: all .1s ease-out;
+}
+
+.check_btn:hover {
+  color: var(--blue-500);
+  cursor: pointer;
+}
+
+.checked_btn {
+  color: var(--purple-500);
+  transition: all .1s ease-out;
+}
+
+.checked_btn:hover {
+  color: var(--purple-300);
+  cursor: pointer;
+}
