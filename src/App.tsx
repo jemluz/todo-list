@@ -10,6 +10,28 @@ import { tasksMock } from './tasks.mock';
 
 export function App() {
   let [tasks, setTasks] = useState(tasksMock);
+  let [completedTasks, setCompletedTasks] = useState(
+    tasks.filter(task => task.isComplete === true)
+  );
+
+  function createTask(taskToCreate: TaskModel) {
+    setTasks([...tasks, taskToCreate]);
+  }
+
+  function toggleCompleteTask(taskToComplete: TaskModel) {
+    const tasksWithCompletedOne = tasks.map(task => {
+      if (task.name === taskToComplete.name) {
+        task.isComplete = !task.isComplete;
+      }
+      return task;
+    })
+
+    setCompletedTasks(
+      tasksWithCompletedOne.filter(
+        task => task.isComplete === true
+      )
+    );
+  }
 
   function deleteTask(taskToDelete: TaskModel) {
     const tasksWithoutDeletedOne = tasks.filter(task => {
@@ -19,21 +41,17 @@ export function App() {
     setTasks(tasksWithoutDeletedOne);
   }
 
-  function createTask(taskToCreate: TaskModel) {
-    setTasks([...tasks, taskToCreate]);
-  }
-
   return (
     <div>
       <Header />
       <main className={styles.wrapper}>
         <NewTask onCreateNewTask={createTask} />
-        <TaskCounter />
+        <TaskCounter totalCount={tasks.length} completedCount={completedTasks.length} />
 
         {(
           tasks.map(
             task => {
-              return <Task key={task.name} task={task} onDeleteTask={deleteTask} />
+              return <Task key={task.name} task={task} onDeleteTask={deleteTask} onCompleteTask={toggleCompleteTask} />
             }
           )
         )}
