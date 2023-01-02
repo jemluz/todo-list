@@ -6,10 +6,14 @@ export interface TaskModel {
 export interface TaskProps {
   task: TaskModel;
   onDeleteTask: (taskToDelete: TaskModel) => void;
+  onCompleteTask: (taskToComplete: TaskModel) => void;
 }
 
 export interface NewTaskProps {
-  // newTaskName: string;
   onCreateNewTask: (taskToCreate: TaskModel) => void;
-  // setNewTask: (newTask: TaskModel) => void;
+}
+
+export interface TaskCounterProps {
+  totalCount: number;
+  completedCount: number;
 }

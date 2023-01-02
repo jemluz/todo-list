@@ -3,13 +3,18 @@ import { useState } from 'react';
 import { TaskProps } from '../interfaces/Task.interfaces';
 import styles from '../styles/Task.module.css'
 
-export function Task({ task, onDeleteTask }: TaskProps) {
+export function Task({ task, onDeleteTask, onCompleteTask }: TaskProps) {
   let [isCheck, setIsCheck] = useState(task.isComplete);
 
   function handleToogleChecked() {
     setIsCheck(state => {
       return !state
     });
+    handleCompleteTask();
+  }
+
+  function handleCompleteTask() {
+    onCompleteTask(task);
   }
 
   function handleDeleteTask() {
